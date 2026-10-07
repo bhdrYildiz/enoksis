@@ -15,8 +15,4 @@ export const navigation = [
     label: "ENREHET",
     href: "#enrehet",
   },
-  {
-    label: "Kaynaklar",
-    href: "/destek",
-  },
 ];

@@ -9,34 +9,61 @@ type GuidePageProps = {
 export default function GuidePage({ guide }: GuidePageProps) {
     return (
         <main className="bg-white">
-            <section className="border-b border-[#EAECF0] bg-[#F8FAFC]">
-                <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 sm:py-18 lg:px-8">
-                    <Link
-                        href="/kullanim-kilavuzu"
-                        className="inline-flex items-center gap-2 text-[12px] font-bold text-[#667085] transition-colors hover:text-[#101828]"
-                    >
-                        <span>←</span>
-                        Tüm kullanım kılavuzları
-                    </Link>
+            <section className="border-b border-[#E4E7EC] bg-white">
+                <div className="mx-auto max-w-[1180px] px-5 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+                    <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+                        <div className="max-w-[760px]">
+                            <Link
+                                href="/kullanim-kilavuzu"
+                                className="group inline-flex items-center gap-2 text-[11px] font-bold text-[#667085] transition-colors hover:text-[#101828]"
+                            >
+                                <span
+                                    aria-hidden="true"
+                                    className="transition-transform group-hover:-translate-x-0.5"
+                                >
+                                    ←
+                                </span>
+                                Tüm kullanım kılavuzları
+                            </Link>
 
-                    <div className="mt-9 max-w-[760px]">
-                        <div className="flex items-center gap-3">
-                            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#FFF4DF] text-[10px] font-extrabold text-[#B86F00]">
-                                {guide.number}
-                            </span>
+                            <div className="mt-7 flex items-center gap-3">
+                                <span className="h-px w-6 bg-[#FF9D00]" />
 
-                            <span className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#B86F00]">
-                                {guide.eyebrow}
-                            </span>
+                                <span className="text-[10px] font-extrabold uppercase tracking-[0.17em] text-[#B86F00]">
+                                    {guide.eyebrow}
+                                </span>
+                            </div>
+
+                            <h1 className="mt-4 max-w-[720px] text-[36px] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#101828] sm:text-[46px] lg:text-[54px]">
+                                {guide.title}
+                            </h1>
+
+                            <p className="mt-5 max-w-[650px] text-[14px] font-medium leading-7 text-[#667085] sm:text-[15px]">
+                                {guide.description}
+                            </p>
                         </div>
 
-                        <h1 className="mt-5 text-[34px] font-extrabold leading-[1.08] tracking-[-0.05em] text-[#101828] sm:text-[46px]">
-                            {guide.title}
-                        </h1>
+                        <div className="flex shrink-0 items-center gap-5 border-t border-[#EAECF0] pt-5 lg:border-l lg:border-t-0 lg:pb-1 lg:pl-8 lg:pt-0">
+                            <div>
+                                <span className="block text-[24px] font-extrabold tracking-[-0.04em] text-[#101828]">
+                                    {guide.sections.length}
+                                </span>
+                                <span className="mt-0.5 block text-[9px] font-extrabold uppercase tracking-[0.12em] text-[#98A2B3]">
+                                    Bölüm
+                                </span>
+                            </div>
 
-                        <p className="mt-5 max-w-[680px] text-[14px] font-medium leading-7 text-[#667085] sm:text-[15px]">
-                            {guide.description}
-                        </p>
+                            <span className="h-8 w-px bg-[#E4E7EC]" />
+
+                            <div>
+                                <span className="block text-[12px] font-extrabold text-[#101828]">
+                                    Adım adım
+                                </span>
+                                <span className="mt-1 block text-[9px] font-extrabold uppercase tracking-[0.12em] text-[#98A2B3]">
+                                    Görsel anlatım
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
