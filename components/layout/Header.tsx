@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/shared/Logo";
@@ -10,7 +11,6 @@ export default function Header() {
             <Container>
                 <div className="flex h-[72px] items-center justify-between lg:h-[80px]">
                     <Logo />
-
                     <nav aria-label="Ana menü" className="hidden items-center gap-1 lg:flex">
                         {navigation.map((item) => (
                             <Link
@@ -21,15 +21,7 @@ export default function Header() {
                                 {item.label}
                             </Link>
                         ))}
-
-                        <Link
-                            href="/#sss"
-                            className="rounded-lg px-3.5 py-2.5 text-[14px] font-semibold text-[#475467] transition-colors duration-200 hover:bg-[#F8FAFC] hover:text-[#101828]"
-                        >
-                            SSS
-                        </Link>
                     </nav>
-
                     <div className="hidden items-center gap-2 lg:flex">
                         <a
                             href="https://kurumsal.enoksis.com/"
@@ -42,7 +34,6 @@ export default function Header() {
                                 ↗
                             </span>
                         </a>
-
                         <Link
                             href="/#demo"
                             className="inline-flex h-11 items-center justify-center rounded-xl bg-[#FF9D00] px-5 text-sm font-bold text-[#101828] shadow-[0_6px_20px_rgba(255,157,0,0.20)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#ED9200]"
@@ -50,7 +41,6 @@ export default function Header() {
                             Ücretsiz Demo
                         </Link>
                     </div>
-
                     <MobileMenu />
                 </div>
             </Container>

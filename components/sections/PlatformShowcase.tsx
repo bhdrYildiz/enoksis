@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "@/components/ui/Container";
-
+import { GraduationCap, UserRound, BookOpenCheck, Sprout, Check } from "lucide-react";
 const steps = [
     {
         number: "01",
@@ -8,11 +8,11 @@ const steps = [
         title: "Önce aynı dili",
         highlight: "konuşmaya başlıyoruz.",
         description:
-            "Yönetici, rehber öğretmen, öğretmen ve veliler; mizaç yaklaşımını eğitim, seminer ve atölyelerle tanır. Böylece öğrenciyi anlamak için okul genelinde ortak bir bakış açısı oluşur.",
+            "Eğitim, seminer ve atölyelerde kurum yöneticileri, rehber öğretmenler, sınıf öğretmenleri ve veliler Enneagram ve mizaç tiplerini yakından tanır. Her mizaca özel gelişim önerilerini öğrenir, ENOKSİS uygulaması hakkında bilgi edinir ve öğrenciyi anlamak için ortak bir bakış açısı kazanır.",
         image: "/images/process/enoksis123.png",
         imageAlt: "ENOKSİS eğitim ve mizaç yaklaşımı ekranı",
         stat: "Ortak Bakış",
-        icon: EducationIcon,
+        icon: GraduationCap,
     },
     {
         number: "02",
@@ -20,11 +20,11 @@ const steps = [
         title: "Her öğrencinin kendine özgü",
         highlight: "yapısını görünür kılıyoruz.",
         description:
-            "Öğrenci, eğitim kademesine uygun Enneagram Mizaç Testi'ni tamamlar. Oluşan kişisel rapor; temel motivasyonları, ihtiyaçları, güçlü yönleri ve gelişim alanlarını anlamaya yardımcı olur.",
+            "Anaokulu, ilkokul, ortaokul, lise ve yetişkinlere özel hazırlanan çevrim içi Enneagram Mizaç Testi ortalama 20–25 dakikada tamamlanır. Öğrenciler kendilerine özel 16 başlıktan oluşan mizaç raporlarına ulaşır; güçlü yönlerini, ihtiyaçlarını ve gelişim alanlarını keşfeder.",
         image: "/images/process/denemeogrenci.png",
         imageAlt: "ENOKSİS öğrenci mizaç testi ve raporlama ekranı",
-        stat: "Bireysel Profil",
-        icon: ProfileIcon,
+        stat: "16 Başlıklı Rapor",
+        icon: UserRound,
     },
     {
         number: "03",
@@ -32,11 +32,11 @@ const steps = [
         title: "Veriyi raporda bırakmıyor,",
         highlight: "gelişime dönüştürüyoruz.",
         description:
-            "Mizaç verileri gözlem, görüşme ve rehberlik süreçleriyle birlikte değerlendirilir. Rehber öğretmen, öğrencinin ihtiyacına uygun çalışmalar planlayabilir ve gelişimini daha yakından takip edebilir.",
+            "Üçüncü aşamada ENREHET (Enneagram Rehberlik Etkinlikleri) devreye girer. Rehberlik servisi ve ilgili öğretmenler, çocukların mizaç özelliklerini merkeze alan etkinlikleri çevrim içi platformdan indirerek öğrencilere uygular. Böylece mizaç bilgisi somut rehberlik çalışmalarına dönüşür.",
         image: "/images/process/ssenrehet.png",
         imageAlt: "ENOKSİS mizaç merkezli rehberlik ekranı",
-        stat: "Kişiselleştirilmiş Rehberlik",
-        icon: GuidanceIcon,
+        stat: "ENREHET Etkinlikleri",
+        icon: BookOpenCheck,
     },
     {
         number: "04",
@@ -44,12 +44,11 @@ const steps = [
         title: "Süreci yalnız bırakmıyor,",
         highlight: "birlikte geliştiriyoruz.",
         description:
-            "Uygulama süreci düzenli süpervizyon çalışmalarıyla desteklenir. Rehberlik ekibinin deneyimleri değerlendirilir, ihtiyaç duyulan alanlar ele alınır ve yaklaşımın okul kültüründe sürdürülebilir hale gelmesi desteklenir.",
-        stat: "Sürdürülebilir Gelişim",
-        icon: GrowthIcon,
+            "Rehber öğretmenler ve velilerle yılda dört kez gerçekleştirilen mizaç merkezli süpervizyon görüşmelerinde uygulama süreci değerlendirilir. İhtiyaçlar ve gelişim alanları ele alınarak öğrenciye sunulan desteğin sürdürülebilirliği güçlendirilir.",
+        stat: "Yılda 4 Süpervizyon",
+        icon: Sprout,
     },
 ];
-
 export default function PlatformShowcase() {
     return (
         <section
@@ -63,22 +62,18 @@ export default function PlatformShowcase() {
                 className="pointer-events-none absolute inset-0"
             >
                 <div className="absolute left-1/2 top-0 h-px w-[70%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#D0D5DD] to-transparent" />
-
                 <div className="absolute -left-40 top-[30%] h-[380px] w-[380px] rounded-full bg-[#FF9D00]/[0.04] blur-[100px]" />
             </div>
-
             <Container className="relative">
                 {/* Header */}
                 <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-20">
                     <div>
                         <div className="inline-flex items-center gap-3">
                             <span className="h-px w-8 bg-[#FF9D00]" />
-
                             <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B86F00] sm:text-[11px]">
                                 ENOKSİS Nasıl Çalışır?
                             </span>
                         </div>
-
                         <h2
                             id="process-title"
                             className="mt-5 max-w-[650px] text-[35px] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#101828] sm:text-[44px] lg:text-[54px]"
@@ -90,21 +85,18 @@ export default function PlatformShowcase() {
                             </span>
                         </h2>
                     </div>
-
                     <div className="lg:pb-1">
                         <p className="max-w-[650px] text-[17px] font-bold leading-[1.55] tracking-[-0.02em] text-[#344054] sm:text-[20px]">
                             Öğrenciyi tanımak başlangıç.
                             Asıl değer, bu bilgiyi eğitime taşımakta.
                         </p>
-
                         <p className="mt-3 max-w-[640px] text-[14px] font-medium leading-7 text-[#667085] sm:text-[15px]">
-                            ENOKSİS; okulun öğrenciyi tanıma, anlama ve
+                            13 yıllık deneyimimiz, kullanıcı dostu platformumuz ve uzman ekibimizle ENOKSİS; okulun öğrenciyi tanıma, anlama ve
                             destekleme biçimini dört birbirini tamamlayan
                             aşamada yapılandırır.
                         </p>
                     </div>
                 </div>
-
                 {/* Process overview */}
                 <div className="mt-12 overflow-hidden rounded-[22px] border border-[#E4E7EC] bg-white sm:mt-14 lg:mt-16">
                     <div className="grid grid-cols-2 lg:grid-cols-4">
@@ -128,10 +120,8 @@ export default function PlatformShowcase() {
                                     <span className="text-[10px] font-extrabold text-[#FF9D00]">
                                         {step.number}
                                     </span>
-
                                     <span className="h-px flex-1 bg-[#EAECF0]" />
                                 </div>
-
                                 <p className="mt-3 text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#475467] sm:text-[12px]">
                                     {step.phase}
                                 </p>
@@ -139,7 +129,6 @@ export default function PlatformShowcase() {
                         ))}
                     </div>
                 </div>
-
                 {/* Process */}
                 <div className="relative mt-10 sm:mt-14 lg:mt-20">
                     {/* Desktop timeline */}
@@ -147,7 +136,6 @@ export default function PlatformShowcase() {
                         aria-hidden="true"
                         className="absolute bottom-20 left-1/2 top-20 hidden w-px -translate-x-1/2 bg-gradient-to-b from-[#FF9D00]/30 via-[#D0D5DD] to-transparent lg:block"
                     />
-
                     <div className="space-y-16 sm:space-y-20 lg:space-y-28">
                         {steps.map((step, index) => (
                             <ProcessStep
@@ -158,20 +146,17 @@ export default function PlatformShowcase() {
                         ))}
                     </div>
                 </div>
-
                 {/* Final statement */}
                 <div className="relative mt-20 overflow-hidden rounded-[28px] bg-[#101828] px-6 py-9 sm:mt-24 sm:rounded-[32px] sm:px-10 sm:py-12 lg:mt-28 lg:px-14">
                     <div
                         aria-hidden="true"
                         className="absolute -right-24 -top-32 h-[350px] w-[350px] rounded-full bg-[#FF9D00]/10 blur-[100px]"
                     />
-
                     <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-14">
                         <div>
                             <span className="text-[10px] font-extrabold uppercase tracking-[0.17em] text-[#FFB84D]">
                                 Tek bir sistem • Sürekli gelişim
                             </span>
-
                             <h3 className="mt-4 max-w-[760px] text-[26px] font-extrabold leading-[1.16] tracking-[-0.04em] text-white sm:text-[32px] lg:text-[37px]">
                                 Bilgi, ancak doğru şekilde kullanıldığında
                                 <span className="text-[#FFB84D]">
@@ -179,14 +164,12 @@ export default function PlatformShowcase() {
                                     gelişime dönüşür.
                                 </span>
                             </h3>
-
                             <p className="mt-4 max-w-[700px] text-[14px] font-medium leading-7 text-[#BFC6D4] sm:text-[15px]">
                                 Bu nedenle ENOKSİS yalnızca öğrenciyi tanıyan
                                 değil, elde edilen bilgiyi rehberlik sürecine
                                 taşıyan bütüncül bir yapı sunar.
                             </p>
                         </div>
-
                         <div className="grid grid-cols-4 gap-2">
                             {["Eğitim", "Test", "Rehberlik", "Süpervizyon"].map(
                                 (label, index) => (
@@ -197,7 +180,6 @@ export default function PlatformShowcase() {
                                         <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-[9px] font-extrabold text-[#FFB84D] sm:h-10 sm:w-10">
                                             0{index + 1}
                                         </span>
-
                                         <span className="mt-2 hidden text-[9px] font-bold text-[#D0D5DD] sm:block">
                                             {label}
                                         </span>
@@ -211,9 +193,7 @@ export default function PlatformShowcase() {
         </section>
     );
 }
-
 type Step = (typeof steps)[number];
-
 function ProcessStep({
     step,
     reverse,
@@ -222,7 +202,6 @@ function ProcessStep({
     reverse: boolean;
 }) {
     const Icon = step.icon;
-
     return (
         <article className="relative grid items-center gap-8 lg:grid-cols-2 lg:gap-20 xl:gap-28">
             {/* Timeline marker */}
@@ -232,7 +211,6 @@ function ProcessStep({
             >
                 {step.number}
             </div>
-
             {/* Content */}
             <div
                 className={
@@ -245,40 +223,33 @@ function ProcessStep({
                     <div className="flex h-11 w-11 items-center justify-center rounded-[14px] border border-[#FFE2B3] bg-[#FFF7E8] text-[#C77800]">
                         <Icon />
                     </div>
-
                     <div>
                         <span className="block text-[9px] font-extrabold tracking-[0.12em] text-[#98A2B3]">
                             {step.number} / 04
                         </span>
-
                         <span className="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#B86F00]">
                             {step.phase}
                         </span>
                     </div>
                 </div>
-
                 <h3 className="mt-5 max-w-[570px] text-[27px] font-extrabold leading-[1.13] tracking-[-0.045em] text-[#101828] sm:text-[33px] lg:text-[38px]">
                     {step.title}
                     <span className="block text-[#FF9D00]">
                         {step.highlight}
                     </span>
                 </h3>
-
                 <p className="mt-5 max-w-[570px] text-[14px] font-medium leading-7 text-[#667085] sm:text-[15px] sm:leading-8">
                     {step.description}
                 </p>
-
                 <div className="mt-6 inline-flex items-center gap-2.5 rounded-full border border-[#E4E7EC] bg-white px-3.5 py-2.5">
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ECFDF3]">
-                        <CheckIcon />
+                        <Check size={12} strokeWidth={3} className="text-[#12B76A]" />
                     </span>
-
                     <span className="text-[11px] font-extrabold text-[#344054] sm:text-[12px]">
                         {step.stat}
                     </span>
                 </div>
             </div>
-
             {/* Visual */}
             <div
                 className={
@@ -299,7 +270,6 @@ function ProcessStep({
         </article>
     );
 }
-
 function ProductVisual({
     src,
     alt,
@@ -317,8 +287,7 @@ function ProductVisual({
                 aria-hidden="true"
                 className="absolute inset-x-[10%] bottom-[-8%] h-[50%] rounded-full bg-[#101828]/[0.08] blur-[45px]"
             />
-
-            <div className="relative overflow-hidden rounded-[22px] border border-[#DDE2EA] bg-white shadow-[0_24px_65px_-22px_rgba(16,24,40,0.26)] sm:rounded-[26px]">
+            <div className="relative overflow-hidden rounded-[22px] border border-[#DDE2EA] bg-white shadow-[0_24px_65px\_-22px_rgba(16,24,40,0.26)] sm:rounded-[26px]">
                 {/* Browser chrome */}
                 <div className="flex h-11 items-center border-b border-[#EAECF0] bg-[#FCFCFD] px-4 sm:h-12">
                     <div className="flex gap-1.5">
@@ -326,16 +295,13 @@ function ProductVisual({
                         <span className="h-2 w-2 rounded-full bg-[#FEC84B]" />
                         <span className="h-2 w-2 rounded-full bg-[#6CE9A6]" />
                     </div>
-
                     <div className="mx-auto flex h-6 items-center rounded-md border border-[#EAECF0] bg-white px-4">
                         <span className="text-[7px] font-bold text-[#98A2B3] sm:text-[8px]">
                             app.enoksis.com
                         </span>
                     </div>
-
                     <div className="w-6" />
                 </div>
-
                 <Image
                     src={src}
                     alt={alt}
@@ -345,10 +311,8 @@ function ProductVisual({
                     className="h-auto w-full object-contain"
                 />
             </div>
-
             <div className="absolute -bottom-3 right-4 flex items-center gap-2 rounded-full border border-[#EAECF0] bg-white px-3.5 py-2 shadow-[0_8px_24px_rgba(16,24,40,0.09)] sm:right-6">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#12B76A]" />
-
                 <span className="text-[8px] font-extrabold uppercase tracking-[0.08em] text-[#475467] sm:text-[9px]">
                     {number} • {phase}
                 </span>
@@ -356,57 +320,48 @@ function ProductVisual({
         </div>
     );
 }
-
 function SupervisionVisual() {
     return (
-        <div className="relative overflow-hidden rounded-[24px] border border-[#E4E7EC] bg-white p-6 shadow-[0_24px_65px_-22px_rgba(16,24,40,0.20)] sm:p-8">
+        <div className="relative overflow-hidden rounded-[24px] border border-[#E4E7EC] bg-white p-6 shadow-[0_24px_65px\_-22px_rgba(16,24,40,0.20)] sm:p-8">
             <div className="flex items-center justify-between">
                 <div>
                     <span className="text-[9px] font-extrabold uppercase tracking-[0.14em] text-[#B86F00]">
                         Sürekli Destek
                     </span>
-
                     <p className="mt-1 text-[16px] font-extrabold tracking-[-0.03em] text-[#101828] sm:text-[18px]">
                         Süpervizyon Döngüsü
                     </p>
                 </div>
-
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF4DF] text-[#C77800]">
-                    <GrowthIcon />
+                    <Sprout />
                 </span>
             </div>
-
             <div className="mt-8 grid grid-cols-2 gap-3">
                 <SupervisionCard
                     number="01"
                     title="Değerlendir"
                     text="Uygulama sürecini gözden geçir."
                 />
-
                 <SupervisionCard
                     number="02"
                     title="İhtiyacı Gör"
                     text="Gelişim alanlarını belirle."
                 />
-
                 <SupervisionCard
                     number="03"
                     title="Destekle"
                     text="Ekibin uygulamasını güçlendir."
                 />
-
                 <SupervisionCard
                     number="04"
                     title="Sürdür"
                     text="Yaklaşımı okul kültürüne taşı."
                 />
             </div>
-
             <div className="mt-4 flex items-center gap-3 rounded-[16px] bg-[#101828] px-4 py-3.5">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FF9D00]">
-                    <CheckIcon dark />
+                    <Check size={12} strokeWidth={3} className="text-[#101828]" />
                 </span>
-
                 <p className="text-[10px] font-bold leading-5 text-[#D0D5DD] sm:text-[11px]">
                     Ölç, değerlendir, geliştir ve yeniden uygula.
                 </p>
@@ -414,7 +369,6 @@ function SupervisionVisual() {
         </div>
     );
 }
-
 function SupervisionCard({
     number,
     title,
@@ -429,150 +383,12 @@ function SupervisionCard({
             <span className="text-[9px] font-extrabold text-[#FF9D00]">
                 {number}
             </span>
-
             <p className="mt-2 text-[12px] font-extrabold text-[#101828] sm:text-[13px]">
                 {title}
             </p>
-
             <p className="mt-1 text-[9px] font-medium leading-4 text-[#667085] sm:text-[10px]">
                 {text}
             </p>
         </div>
-    );
-}
-
-function EducationIcon() {
-    return (
-        <svg
-            width="21"
-            height="21"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-        >
-            <path
-                d="M3 9L12 4L21 9L12 14L3 9Z"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M7 12V16.5C9.8 18.5 14.2 18.5 17 16.5V12"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-        </svg>
-    );
-}
-
-function ProfileIcon() {
-    return (
-        <svg
-            width="21"
-            height="21"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-        >
-            <circle
-                cx="12"
-                cy="8"
-                r="3.5"
-                stroke="currentColor"
-                strokeWidth="1.7"
-            />
-            <path
-                d="M5 20C5.6 16.5 8 14.5 12 14.5C16 14.5 18.4 16.5 19 20"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-        </svg>
-    );
-}
-
-function GuidanceIcon() {
-    return (
-        <svg
-            width="21"
-            height="21"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-        >
-            <path
-                d="M4 19V14L9 9L13 13L20 6"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M15 6H20V11"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-}
-
-function GrowthIcon() {
-    return (
-        <svg
-            width="21"
-            height="21"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-        >
-            <path
-                d="M12 21C12 15 14.5 10.5 20 7"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-            <path
-                d="M12 17C10 12.5 7.5 10 4 9"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-            <path
-                d="M20 7C17 6.5 14.8 7.2 13.5 9.5"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-            <path
-                d="M4 9C7.5 8.5 10 9.7 11 12"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-            />
-        </svg>
-    );
-}
-
-function CheckIcon({ dark = false }: { dark?: boolean }) {
-    return (
-        <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-            className={dark ? "text-[#101828]" : "text-[#12B76A]"}
-        >
-            <path
-                d="M5 12.5L9.5 17L19 7.5"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
     );
 }
